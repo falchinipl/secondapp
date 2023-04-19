@@ -1,0 +1,17 @@
+<ng-template #cardAttendeeList>
+    <div class="card-info-container" *ngFor="let prize of prizes; index as i" (click) = "getCurrentPrize(i)">
+      
+        <p >{{prize.prizeType}}</p>
+        <img src="{{prize.imgUrl}}" width="80px">
+        <p >{{prize.label}}</p>
+        
+      
+     
+        <p >{{prize.capacity}}</p>
+     </div>
+  </ng-template>
+  
+  <app-card 
+    [cardModel] = "cardAttendeeList">
+  </app-card>
+<button (click) = "goToStep()">next</button>
